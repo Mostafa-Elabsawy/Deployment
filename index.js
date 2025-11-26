@@ -9,5 +9,5 @@ app.use(express.json());
 app.use(cors());
 app.use("/users", Routes.userRouter);
 app.listen(port, () => {
-  console.log(`server started at http://localhost:${prot}`);
+  console.log(`server started at http://localhost:${port}`);
 });
