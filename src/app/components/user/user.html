@@ -1,0 +1,89 @@
+<div class="Card container w-100 h-100 overflow-hidden  ">
+  <div class="Card-head">
+    <img src="male.jpeg" alt="Profile Picture" class="img-fluid" />
+    <div class="info">
+      <p class="name">{{info.name}}</p>
+      <p class="email">
+        <img src="envelop.svg" alt="Email Icon" />
+        {{info.email}}
+      </p>
+    </div>
+  </div>
+  <p class="description">{{info.bio}}</p>
+</div>
+
+<style>
+  /* Card Styling */
+  .Card {
+      border-radius: 10px;
+      background-color: white;
+      border: 2px solid rgba(0, 0, 0, 0.248);
+          transition: all 0.4s ease-in-out;
+
+      padding: 10px;
+    }
+    
+    /* Card Head */
+    .Card-head {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    padding: 10px 0;
+}
+
+.Card-head img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  /* Info */
+  .info .name {
+      font-size: clamp(1.2rem, 2vw, 1.5rem); /* responsive font */
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .info .email {
+        display: flex;
+        align-items: center;
+        font-size: clamp(0.9rem, 1.5vw, 1rem); /* responsive font */
+    color: gray;
+    margin: 0;
+}
+
+.info .email img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* Description */
+.description {
+    padding: 0 10px 4px 10px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem); /* responsive font */
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Optional: Make card width responsive */
+@media (max-width: 768px) {
+    .Card {
+      width: 90%;
+    }
+
+    .Card-head img {
+        width: 60px;
+        height: 60px;
+    }
+}
+.Card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transform: translate(2px,2px) scale(1.01,1.01);
+    border: #0d6efd 2px solid;
+    
+}
+</style>
